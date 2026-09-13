@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Reyes | Ingeniería de Sistemas · Procesos TI</title>
+  <meta name="description" content="Portafolio de John Edisson Reyes Vera — Documentación, ITIL y Gestión de Procesos TI. Gestión de cambios, incidentes y CMDB.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<nav class="topbar">
+  <div class="topbar-logo">jr<span>@</span>procesos-ti<span>:~$</span></div>
+  <button class="btn-download" id="btn-pdf" onclick="generateATSPdf()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+    Descargar CV (ATS PDF)
+  </button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div>
+    <div class="hero-tag"><span class="status-dot"></span> Disponible para nuevas oportunidades · Bogotá, Colombia</div>
+    <h1>John <span class="dim">Edisson</span><br>Reyes Vera</h1>
+    <p class="hero-sub">Ingeniero de Sistemas especializado en documentación, optimización y acreditación de procesos de TI bajo el estándar ITIL. Amplio dominio en gestión de cambios, incidentes, CMDB y soporte técnico, con más de 15 años de experiencia en el sector.</p>
+    <div class="hero-links">
+      <a class="pill" href="mailto:johnedireyes@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+        johnedireyes@gmail.com
+      </a>
+      <a class="pill" href="tel:3008098538">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        300 809 8538
+      </a>
+      <span class="pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        CR 108 # 22F - 16, Bogotá
+      </span>
+      <span class="pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+        TP 251068-031694 CND
+      </span>
+    </div>
+  </div>
+  <div class="avatar-box">
+    <img src="John.jpeg" alt="John Edisson Reyes Vera" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+  </div>
+</header>
+
+<!-- MAIN GRID -->
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="card">
+      <div class="card-title">Contacto</div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        CR 108 # 22F - 16, Bogotá
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+        <a href="mailto:johnedireyes@gmail.com">johnedireyes@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <a href="tel:3008098538">300 809 8538</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+        TP 251068-031694 CND
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Habilidades técnicas</div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">ITIL & Gestión de Procesos</div>
+        <div class="skill-tags">
+          <span class="tag cyan">ITIL Foundation V3</span>
+          <span class="tag cyan">Gestión de Cambios</span>
+          <span class="tag cyan">Gestión de Incidentes</span>
+          <span class="tag cyan">CMDB</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Documentación</div>
+        <div class="skill-tags">
+          <span class="tag purple">Manuales técnicos</span>
+          <span class="tag purple">Documentación de procesos</span>
+          <span class="tag purple">HTML</span>
+          <span class="tag purple">Microsoft Word</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Gestión de Riesgos</div>
+        <div class="skill-tags">
+          <span class="tag orange">Análisis de riesgos</span>
+          <span class="tag orange">Planes de mitigación</span>
+          <span class="tag orange">Auditorías internas</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Soporte & Redes</div>
+        <div class="skill-tags">
+          <span class="tag">Soporte técnico N1/N2</span>
+          <span class="tag">Redes LAN</span>
+          <span class="tag">CCNA Exploración</span>
+          <span class="tag">Servidores Windows</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-label">Herramientas</div>
+        <div class="skill-tags">
+          <span class="tag green">GitHub</span>
+          <span class="tag green">Excel (tablas dinámicas)</span>
+          <span class="tag green">SAP R3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Formación</div>
+      <div style="font-size:13px;color:var(--text);margin-bottom:4px">Ingeniero de Sistemas</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:14px;font-family:var(--mono)">Areandina</div>
+      <div style="font-size:13px;color:var(--text);margin-bottom:4px">Tecnólogo en Administración de Redes y Datos</div>
+      <div style="font-size:11px;color:var(--muted);font-family:var(--mono)">SENA · Dic. 2013</div>
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- 01 PERFIL -->
+    <div class="section">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>Perfil</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="profile-text">
+        Ingeniero de Sistemas especializado en la <strong style="color:var(--accent)">documentación</strong>, <strong style="color:var(--accent)">optimización</strong> y <strong style="color:var(--accent)">acreditación</strong> de procesos de TI bajo el estándar ITIL. Amplio dominio en soporte técnico, control de calidad en hardware y software, y análisis de grandes volúmenes de información. Me caracterizo por el liderazgo proactivo, la responsabilidad y la capacidad para resolver situaciones complejas bajo presión, garantizando el cumplimiento de los objetivos y metas de productividad organizacional.
+      </div>
+    </div>
+
+    <!-- 02 EXPERIENCIA -->
+    <div class="section">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Experiencia laboral</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Analista Master</div>
+            <div class="exp-company">Alianza Temporales SAS</div>
+          </div>
+          <div class="exp-date">Oct 2024 – Sept 2026</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Ejecución operativa de los procesos de Transición e Incidentes bajo los SLA acordados con Servientrega.</li>
+          <li>Mantenimiento de la CMDB: trazabilidad, versionado y relación de activos de TI con los servicios en operación.</li>
+          <li>Punto de contacto principal en incidentes, supervisando la resolución de principio a fin.</li>
+          <li>Identificación, evaluación y mitigación de riesgos de operación y proyectos de TI; reportes para alta dirección.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Documentador</div>
+            <div class="exp-company">Digitalware</div>
+          </div>
+          <div class="exp-date">Oct 2022 – Jun 2024</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Redacción y actualización de manuales técnicos y operativos del producto SEVEN, en Word y HTML.</li>
+          <li>Gestión y cierre de casos de documentación en el sistema de Atención al Cliente (SAC).</li>
+          <li>Administración de repositorios en GitHub y coordinación de control de versiones con desarrollo.</li>
+          <li>Planificación y presentación de webinars sobre mejoras del producto para capacitar usuarios.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Analista de Procesos TI para ETB</div>
+            <div class="exp-company">Tivit — Colombia</div>
+          </div>
+          <div class="exp-date">Mar 2016 – Jun 2022</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Planes detallados de cambio en sistemas, aplicaciones e infraestructura, con evaluación de riesgos y recursos.</li>
+          <li>Revisión y aprobación de solicitudes de cambio dentro del comité de cambios.</li>
+          <li>Evaluación de impacto de los cambios sobre sistemas, procesos de negocio y usuarios.</li>
+          <li>Auditoría post-cambio para identificar lecciones aprendidas y mejorar procesos futuros.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Técnico III en Gestión y Maduración de Proyectos</div>
+            <div class="exp-company">PCI – Dismet · Ecopetrol</div>
+          </div>
+          <div class="exp-date">Nov 2014 – Nov 2015</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Control de calidad y acreditación del proyecto BHIP bajo procesos ITIL de la UTI Ecopetrol.</li>
+          <li>Elaboración de manuales técnicos y montaje del Plan de Recuperación Tecnológico (PRT).</li>
+          <li>Soporte en sitio a usuario final: hardware, software, impresoras, escáner, antivirus y redes LAN.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Técnico de Sistemas</div>
+            <div class="exp-company">Idra Sistemas S.A · Ecopetrol</div>
+          </div>
+          <div class="exp-date">Sept 2014 – Nov 2014</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Soporte de hardware y software instalado en la compañía; asesoría a usuarios sobre recursos informáticos.</li>
+          <li>Control de inventario de software y hardware de la organización.</li>
+          <li>Escalación de incidentes a los grupos especializados.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Técnico III en Gestión y Maduración de Proyectos</div>
+            <div class="exp-company">AB Proyectos S.A. · Ecopetrol</div>
+          </div>
+          <div class="exp-date">May 2013 – Dic 2013</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Corrección de data sobre la maestra de personal y generación de reportes en SAP R3.</li>
+          <li>Control de calidad y acreditación del Portal de Gestión de Servicios Compartidos de Ecopetrol bajo ITIL.</li>
+          <li>Reconocimiento por el proyecto RETOS, por espíritu de equipo y compromiso con los objetivos.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Asesor Senior</div>
+            <div class="exp-company">B.R.M Grandes Interacciones</div>
+          </div>
+          <div class="exp-date">Sept 2012 – Ene 2013</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Recaudo de fondos a nivel nacional para la Fundación Cardio Infantil.</li>
+          <li>Análisis y documentación de grandes volúmenes de información de clientes potenciales.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Agente Call Center</div>
+            <div class="exp-company">Activos S.A.</div>
+          </div>
+          <div class="exp-date">Sept 2010 – May 2011</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Asignado a B.R.M Grandes Interacciones para el recaudo de fondos de la Fundación Cardio Infantil.</li>
+          <li>Análisis y documentación de información de clientes potenciales a nivel nacional.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Analista de Información y Soporte Técnico</div>
+            <div class="exp-company">Multitech Colombia Ltda.</div>
+          </div>
+          <div class="exp-date">Mar 2006 – Jun 2010</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Creación y mantenimiento de documentación técnica clara para distintas audiencias.</li>
+          <li>Aseguramiento de calidad y documentación de productos mediante tablas dinámicas en Excel.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 03 FORMACIÓN Y CERTIFICACIONES -->
+    <div class="section">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>Formación y certificaciones</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card cert-highlight">
+          <div class="cert-issuer">Areandina</div>
+          <div class="cert-name">Ingeniero de Sistemas</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">SENA</div>
+          <div class="cert-name">Tecnólogo en Administración de Redes y Datos</div>
+          <div class="cert-date">Diciembre 2013</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">AXELOS</div>
+          <div class="cert-name">ITIL Foundation V3</div>
+          <div class="cert-date">Noviembre 2017</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Diplomado</div>
+          <div class="cert-name">Ciberseguridad</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Curso</div>
+          <div class="cert-name">CCNA Exploración — Aspectos básicos de networking</div>
+          <div class="cert-desc">72 horas</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Curso</div>
+          <div class="cert-name">Instalación y configuración de servidores Windows con servicios de red</div>
+          <div class="cert-desc">70 horas</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Divulgación tecnológica</div>
+          <div class="cert-name">Diseño de ficha técnica de producto</div>
+          <div class="cert-desc">2 horas</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Divulgación tecnológica</div>
+          <div class="cert-name">Diseño de flujogramas</div>
+          <div class="cert-desc">4 horas</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Divulgación tecnológica</div>
+          <div class="cert-name">Elaboración de cotizaciones</div>
+          <div class="cert-desc">4 horas</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Divulgación tecnológica</div>
+          <div class="cert-name">Negociación en proyectos</div>
+          <div class="cert-desc">4 horas</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Divulgación tecnológica</div>
+          <div class="cert-name">Planeación estratégica</div>
+          <div class="cert-desc">4 horas</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 REFERENCIAS -->
+    <div class="section">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2>Referencias personales</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-issuer">Conductor</div>
+          <div class="cert-name">Nolberto Vera Cárdenas</div>
+          <div class="cert-date">310 336 8120</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Ingeniera de Sistemas, Tivit</div>
+          <div class="cert-name">Diana Moncaleaño</div>
+          <div class="cert-date">300 371 8690</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-issuer">Ingeniero de Sistemas, Tivit</div>
+          <div class="cert-name">Anderson Mauricio Quiñonez</div>
+          <div class="cert-date">320 803 1884</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <span style="color:var(--accent)">John Edisson Reyes Vera</span> · CC 1.015.998.754 · Bogotá, Colombia
+</footer>
+
+<script>
+function generateATSPdf() {
+  const btn = document.getElementById('btn-pdf');
+  const origHTML = btn.innerHTML;
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Generando...';
+  btn.disabled = true;
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true });
+
+  const pageW  = 210;
+  const pageH  = 297;
+  const ml     = 18;
+  const mr     = 18;
+  const contentW = pageW - ml - mr;
+  let y = 20;
+
+  const C = {
+    black:    [0,   0,   0],
+    darkGray: [40,  40,  40],
+    gray:     [80,  80,  80],
+    light:    [120, 120, 120],
+    rule:     [200, 200, 200],
+  };
+
+  function checkPage(needed = 8) {
+    if (y + needed > pageH - 15) { doc.addPage(); y = 18; }
+  }
+
+  function rule(color = C.rule, thickness = 0.3) {
+    doc.setDrawColor(...color);
+    doc.setLineWidth(thickness);
+    doc.line(ml, y, pageW - mr, y);
+    y += 4;
+  }
+
+  function sectionTitle(title) {
+    checkPage(12);
+    y += 2;
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(10);
+    doc.setTextColor(...C.black);
+    doc.text(title.toUpperCase(), ml, y);
+    y += 1.5;
+    rule(C.rule, 0.4);
+  }
+
+  function bullet(text, indent = 4) {
+    checkPage(6);
+    const lines = doc.splitTextToSize('• ' + text, contentW - indent);
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9.5);
+    doc.setTextColor(...C.darkGray);
+    doc.text(lines, ml + indent, y);
+    y += lines.length * 5 + 1;
+  }
+
+  function bodyText(text, opts = {}) {
+    const { bold = false, size = 9.5, color = C.darkGray, indent = 0, gap = 1.5 } = opts;
+    checkPage(6);
+    doc.setFont('helvetica', bold ? 'bold' : 'normal');
+    doc.setFontSize(size);
+    doc.setTextColor(...color);
+    const lines = doc.splitTextToSize(text, contentW - indent);
+    doc.text(lines, ml + indent, y);
+    y += lines.length * 5 + gap;
+  }
+
+  function twoCol(left, right, opts = {}) {
+    const {
+      boldLeft  = false, sizeLeft  = 9.5, colorLeft  = C.darkGray,
+      boldRight = false, sizeRight = 9,   colorRight = C.light,
+    } = opts;
+    checkPage(6);
+    doc.setFont('helvetica', boldLeft ? 'bold' : 'normal');
+    doc.setFontSize(sizeLeft);
+    doc.setTextColor(...colorLeft);
+    doc.text(left, ml, y);
+    doc.setFont('helvetica', boldRight ? 'bold' : 'normal');
+    doc.setFontSize(sizeRight);
+    doc.setTextColor(...colorRight);
+    doc.text(right, pageW - mr, y, { align: 'right' });
+  }
+
+  // ── ENCABEZADO ────────────────────────────────────────────────────────────
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(22);
+  doc.setTextColor(...C.black);
+  doc.text('John Edisson Reyes Vera', ml, y);
+  y += 6;
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(9.5);
+  doc.setTextColor(...C.gray);
+  doc.text('Ingenieria de Sistemas · Documentacion · ITIL · Gestion de Procesos TI', ml, y);
+  y += 5;
+
+  doc.setFontSize(9);
+  doc.setTextColor(...C.light);
+  doc.text('Bogota, CR 108 # 22F - 16  |  johnedireyes@gmail.com  |  300 809 8538  |  TP 251068-031694 CND', ml, y);
+  y += 3;
+  rule(C.rule, 0.5);
+
+  // ── PERFIL ────────────────────────────────────────────────────────────────
+  sectionTitle('Perfil Profesional');
+  bodyText(
+    'Ingeniero de Sistemas especializado en la documentacion, optimizacion y acreditacion de procesos ' +
+    'de TI bajo el estandar ITIL. Amplio dominio en soporte tecnico, control de calidad de hardware y ' +
+    'software, y analisis de grandes volumenes de informacion. Liderazgo proactivo, responsabilidad y ' +
+    'capacidad para resolver situaciones complejas bajo presion, garantizando el cumplimiento de los ' +
+    'objetivos y metas de productividad organizacional.',
+    { color: C.darkGray }
+  );
+
+  // ── HABILIDADES ───────────────────────────────────────────────────────────
+  sectionTitle('Habilidades Tecnicas');
+
+  const skills = [
+    ['ITIL & Procesos',   'ITIL Foundation V3, Gestion de Cambios, Gestion de Incidentes, CMDB, Gestion de Riesgos'],
+    ['Documentacion',     'Manuales tecnicos y operativos, documentacion de procesos, HTML, Microsoft Word'],
+    ['Soporte & Redes',   'Soporte tecnico N1/N2, redes LAN, CCNA Exploracion, servidores Windows'],
+    ['Herramientas',      'GitHub, Excel (tablas dinamicas), SAP R3'],
+  ];
+
+  skills.forEach(([label, value]) => {
+    checkPage(6);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(9.5);
+    doc.setTextColor(...C.darkGray);
+    const labelStr = label + ': ';
+    doc.text(labelStr, ml, y);
+    const labelW = doc.getTextWidth(labelStr);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...C.gray);
+    const valueLines = doc.splitTextToSize(value, contentW - labelW);
+    doc.text(valueLines[0], ml + labelW, y);
+    y += 5;
+    for (let i = 1; i < valueLines.length; i++) {
+      doc.text(valueLines[i], ml + labelW, y);
+      y += 5;
+    }
+  });
+
+  // ── EXPERIENCIA ───────────────────────────────────────────────────────────
+  sectionTitle('Experiencia Laboral');
+
+  const jobs = [
+    {
+      role: 'Analista Master', company: 'Alianza Temporales SAS', dates: 'Oct 2024 - Sept 2026',
+      bullets: [
+        'Ejecucion operativa de los procesos de Transicion e Incidentes bajo los SLA acordados con Servientrega.',
+        'Mantenimiento de la CMDB: trazabilidad, versionado y relacion de activos de TI con los servicios en operacion.',
+        'Punto de contacto principal en incidentes, supervisando la resolucion de principio a fin.',
+        'Identificacion, evaluacion y mitigacion de riesgos de operacion y proyectos de TI; reportes para alta direccion.',
+      ],
+    },
+    {
+      role: 'Documentador', company: 'Digitalware', dates: 'Oct 2022 - Jun 2024',
+      bullets: [
+        'Redaccion y actualizacion de manuales tecnicos y operativos del producto SEVEN, en Word y HTML.',
+        'Gestion y cierre de casos de documentacion en el sistema de Atencion al Cliente (SAC).',
+        'Administracion de repositorios en GitHub y coordinacion de control de versiones con desarrollo.',
+        'Planificacion y presentacion de webinars sobre mejoras del producto para capacitar usuarios.',
+      ],
+    },
+    {
+      role: 'Analista de Procesos TI para ETB', company: 'Tivit - Colombia', dates: 'Mar 2016 - Jun 2022',
+      bullets: [
+        'Planes detallados de cambio en sistemas, aplicaciones e infraestructura, con evaluacion de riesgos y recursos.',
+        'Revision y aprobacion de solicitudes de cambio dentro del comite de cambios.',
+        'Evaluacion de impacto de los cambios sobre sistemas, procesos de negocio y usuarios.',
+        'Auditoria post-cambio para identificar lecciones aprendidas y mejorar procesos futuros.',
+      ],
+    },
+    {
+      role: 'Tecnico III en Gestion y Maduracion de Proyectos', company: 'PCI - Dismet, Ecopetrol', dates: 'Nov 2014 - Nov 2015',
+      bullets: [
+        'Control de calidad y acreditacion del proyecto BHIP bajo procesos ITIL de la UTI Ecopetrol.',
+        'Elaboracion de manuales tecnicos y montaje del Plan de Recuperacion Tecnologico (PRT).',
+        'Soporte en sitio a usuario final: hardware, software, impresoras, escaner, antivirus y redes LAN.',
+      ],
+    },
+    {
+      role: 'Tecnico de Sistemas', company: 'Idra Sistemas S.A, Ecopetrol', dates: 'Sept 2014 - Nov 2014',
+      bullets: [
+        'Soporte de hardware y software instalado en la compania; asesoria a usuarios sobre recursos informaticos.',
+        'Control de inventario de software y hardware de la organizacion.',
+        'Escalacion de incidentes a los grupos especializados.',
+      ],
+    },
+    {
+      role: 'Tecnico III en Gestion y Maduracion de Proyectos', company: 'AB Proyectos S.A., Ecopetrol', dates: 'May 2013 - Dic 2013',
+      bullets: [
+        'Correccion de data sobre la maestra de personal y generacion de reportes en SAP R3.',
+        'Control de calidad y acreditacion del Portal de Gestion de Servicios Compartidos de Ecopetrol bajo ITIL.',
+        'Reconocimiento por el proyecto RETOS, por espiritu de equipo y compromiso con los objetivos.',
+      ],
+    },
+    {
+      role: 'Asesor Senior', company: 'B.R.M Grandes Interacciones', dates: 'Sept 2012 - Ene 2013',
+      bullets: [
+        'Recaudo de fondos a nivel nacional para la Fundacion Cardio Infantil.',
+        'Analisis y documentacion de grandes volumenes de informacion de clientes potenciales.',
+      ],
+    },
+    {
+      role: 'Agente Call Center', company: 'Activos S.A.', dates: 'Sept 2010 - May 2011',
+      bullets: [
+        'Asignado a B.R.M Grandes Interacciones para el recaudo de fondos de la Fundacion Cardio Infantil.',
+        'Analisis y documentacion de informacion de clientes potenciales a nivel nacional.',
+      ],
+    },
+    {
+      role: 'Analista de Informacion y Soporte Tecnico', company: 'Multitech Colombia Ltda.', dates: 'Mar 2006 - Jun 2010',
+      bullets: [
+        'Creacion y mantenimiento de documentacion tecnica clara para distintas audiencias.',
+        'Aseguramiento de calidad y documentacion de productos mediante tablas dinamicas en Excel.',
+      ],
+    },
+  ];
+
+  jobs.forEach(j => {
+    checkPage(10);
+    twoCol(j.role + ' — ' + j.company, j.dates, { boldLeft: true, sizeLeft: 10 });
+    y += 5.5;
+    j.bullets.forEach(b => bullet(b));
+    y += 2;
+  });
+
+  // ── FORMACION Y CERTIFICACIONES ──────────────────────────────────────────
+  sectionTitle('Formacion y Certificaciones');
+
+  const certs = [
+    ['Ingeniero de Sistemas',                    'Areandina',       ''],
+    ['Tecnologo en Administracion de Redes y Datos', 'SENA',        'Diciembre 2013'],
+    ['ITIL Foundation V3',                        'AXELOS',          'Noviembre 2017'],
+    ['Diplomado en Ciberseguridad',               '',                ''],
+    ['CCNA Exploracion - Aspectos basicos de networking', '',        '72 horas'],
+    ['Instalacion y configuracion de servidores Windows con servicios de red', '', '70 horas'],
+    ['Diseno de ficha tecnica de producto',       'Divulgacion tecnologica', '2 horas'],
+    ['Diseno de flujogramas',                     'Divulgacion tecnologica', '4 horas'],
+    ['Elaboracion de cotizaciones',                'Divulgacion tecnologica', '4 horas'],
+    ['Negociacion en proyectos',                   'Divulgacion tecnologica', '4 horas'],
+    ['Planeacion estrategica',                     'Divulgacion tecnologica', '4 horas'],
+  ];
+
+  certs.forEach(([name, issuer, date]) => {
+    checkPage(7);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(9.5);
+    doc.setTextColor(...C.darkGray);
+    doc.text(name, ml, y);
+    y += 4.5;
+    const meta = [issuer, date].filter(Boolean).join('  ·  ');
+    if (meta) {
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(9);
+      doc.setTextColor(...C.gray);
+      doc.text(meta, ml, y);
+      y += 5.5;
+    } else {
+      y += 1;
+    }
+  });
+
+  // ── REFERENCIAS ───────────────────────────────────────────────────────────
+  sectionTitle('Referencias Personales');
+  const refs = [
+    ['Nolberto Vera Cardenas', 'Conductor · 310 336 8120'],
+    ['Diana Moncaleano', 'Ingeniera de Sistemas, Tivit · 300 371 8690'],
+    ['Anderson Mauricio Quinonez', 'Ingeniero de Sistemas, Tivit · 320 803 1884'],
+  ];
+  refs.forEach(([name, meta]) => {
+    checkPage(7);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(9.5);
+    doc.setTextColor(...C.darkGray);
+    doc.text(name, ml, y);
+    y += 4.5;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(9);
+    doc.setTextColor(...C.gray);
+    doc.text(meta, ml, y);
+    y += 5.5;
+  });
+
+  // ── GUARDAR ───────────────────────────────────────────────────────────────
+  doc.save('John_Reyes_Vera_CV_ATS.pdf');
+  btn.innerHTML = origHTML;
+  btn.disabled = false;
+}
+</script>
+
+</body>
+</html>
